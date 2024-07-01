@@ -23,9 +23,6 @@ class HelloView(View):
         visitor_name_raw = request.GET.get('visitor_name', 'Visitor')
         visitor_name = visitor_name_raw.strip('"')
 
-        print(f"Visitor name raw: {visitor_name_raw}")
-        print(f"Visitor name processed: {visitor_name}")
-
         client_ip = self.get_client_ip(request)
 
         # Fetch location data based on client IP
