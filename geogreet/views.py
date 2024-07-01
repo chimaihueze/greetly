@@ -54,9 +54,6 @@ class HelloView(View):
         response_data = {
             "client_ip": client_ip,
             "location": city,
-            "latitude": lat,
-            "longitude": lon,
-            "temperature": temp,
             "greeting": f"Hello, {request.GET.get('visitor_name')}! The temperature is {temp} degrees Celsius in {city}"
         }
 
