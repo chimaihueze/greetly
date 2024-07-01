@@ -40,7 +40,6 @@ class HelloView(View):
         if lat is None or lon is None:
             raise ValueError("Latitude or longitude not found in location data")
 
-        api_key = "370d2b2ff9634579bdab8e1c57301193"
         api_key = '4119686291c60153a40a37a39d8db374'
 
         weather_response = requests.get(
