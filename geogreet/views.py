@@ -29,7 +29,7 @@ class HelloView(View):
         client_ip = self.get_client_ip(request)
 
         # Fetch location data based on client IP
-        location_response = requests.get(f'http://ip-api.com/json/31.205.135.249')
+        location_response = requests.get(f'http://ip-api.com/json/{client_ip}')
         location_response.raise_for_status()
         location_data = location_response.json()
 
