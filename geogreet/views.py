@@ -43,8 +43,6 @@ class HelloView(View):
         api_key = '4119686291c60153a40a37a39d8db374'
 
         weather_response = requests.get(
-            f'https://api.weatherbit.io/v2.0/current?lat={lat}&lon={lon}&key={api_key}&include=minutely')
-        weather_response = requests.get(
             f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}')
         weather_data = weather_response.json()
         temperature = weather_data['main']['temp']
